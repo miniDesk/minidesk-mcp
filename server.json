@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.minidesk/minidesk",
+  "title": "miniDesk",
+  "description": "Work your miniDesk support inbox from AI apps: read conversations, search docs, draft replies.",
+  "version": "1.0.0",
+  "websiteUrl": "https://minidesk.ai/en/mcp/",
+  "repository": {
+    "url": "https://github.com/miniDesk/minidesk-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/miniDesk/minidesk-mcp/main/logo.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.minidesk.ai/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by an MCP token from Settings → MCP in miniDesk, for example: Bearer mdsk_mcp_...",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
